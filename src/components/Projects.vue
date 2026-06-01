@@ -50,6 +50,7 @@ const projects = [
     flex-direction: column;
     gap: 3rem;
     margin: 7rem 0;
+    scroll-margin-top: 2rem;
 }
 
 .projects-heading {
@@ -73,7 +74,7 @@ const projects = [
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
 }
 
@@ -155,10 +156,6 @@ const projects = [
 @media (max-width: 900px) {
     .projects {
         margin: 5rem 0;
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

@@ -8,38 +8,36 @@ interface HeaderLinks {
 const headerLinks: HeaderLinks[] = [
     {
         title: "home",
-        route: ""
+        route: "#home"
     },
     {
         title: "sobre mim",
-        route: ""
+        route: "#sobre"
     },
     {
         title: "stack",
-        route: ""
+        route: "#stack"
     },
 {
         title: "projetos",
-        route: ""
+        route: "#projetos"
     },
     {
         title: "contato",
-        route: ""
+        route: "#contato"
     },
 ]
 </script>
 
 <template>
     <nav class="nav-button">
-        <ul class="nav-list">
-            <div class="header-links">
+        <div class="nav-list">
+            <ul class="header-links">
                 <li v-for="item in headerLinks" :key="item.title">
-                    <button class="header-link">
-                    {{ item.title }}
-                    </button>
+                    <a class="header-link" :href="item.route">{{ item.title }}</a>
                 </li>
-            </div>
-            <div class="social-links">
+            </ul>
+            <ul class="social-links">
                 <li>
                     <a href="https://codeberg.org/vexis" target="_blank" rel="noopener noreferrer">
                     <span class="social-icon github-icon" aria-label="github"></span>
@@ -50,8 +48,8 @@ const headerLinks: HeaderLinks[] = [
                     <span class="social-icon linkedin-icon" aria-label="linkedin"></span>
                     </a>
                 </li>
-            </div>
-        </ul>
+            </ul>
+        </div>
     </nav>
 </template>
 
@@ -83,6 +81,9 @@ const headerLinks: HeaderLinks[] = [
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .header-link {
@@ -90,9 +91,7 @@ const headerLinks: HeaderLinks[] = [
     font-size: 1.125rem;
     font-weight: 700;
     text-transform: capitalize;
-    background: none;
-    border: 0;
-    cursor: pointer;
+    text-decoration: none;
     transition: color 150ms;
 }
 
@@ -104,6 +103,9 @@ const headerLinks: HeaderLinks[] = [
     display: flex;
     flex-shrink: 0;
     gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .social-icon {

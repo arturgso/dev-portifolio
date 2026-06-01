@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="container">
+    <section class="hero-container" id="home">
         <h1 class="message">
             Olá 👋,<br />
             Meu nome é<br />
@@ -10,14 +10,15 @@
             Eu faço sites para web
         </h1>
         <div class="dev-pic"></div>
-    </div>
+    </section>
 </template>
 
 <style scoped>
-    .container {
+    .hero-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
         gap: 4rem;
         margin: 6em 0;
         min-width: 0;
@@ -70,7 +71,7 @@
     }
 
     @media (max-width: 900px) {
-        .container {
+        .hero-container {
             gap: 2rem;
             margin: 3.5em 0;
         }
@@ -84,10 +85,11 @@
             height: 160px;
             flex-basis: 160px;
         }
+
     }
 
     @media (max-width: 640px) {
-        .container {
+        .hero-container {
             flex-direction: column;
             align-items: center;
             gap: 2rem;

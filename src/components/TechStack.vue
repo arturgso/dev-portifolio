@@ -40,6 +40,7 @@ const technologies = [
     flex-direction: column;
     gap: 3.5rem;
     margin: 7rem 0;
+    scroll-margin-top: 2rem;
 }
 
 .stack-heading {
@@ -54,14 +55,16 @@ const technologies = [
 }
 
 .stack-heading p {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 620px;
     color: #a7a7a7;
     font-size: 1.125rem;
+    line-height: 1.6;
 }
 
 .tech-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
     gap: 2.5rem 2rem;
     margin: 0;
     padding: 0;
@@ -96,7 +99,7 @@ const technologies = [
         margin: 5rem 0;
     }
     .tech-list {
-        grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
         gap: 2rem 1.5rem;
     }
 }
@@ -124,7 +127,7 @@ const technologies = [
 
 @media (max-width: 380px) {
     .tech-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.5rem 1rem;
     }
 

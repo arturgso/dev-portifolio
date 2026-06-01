@@ -5,3 +5,11 @@
   background-color: #191919;
   color: white
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
