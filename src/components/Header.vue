@@ -69,7 +69,11 @@ const headerLinks: HeaderLinks[] = [
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .header-links {
@@ -77,6 +81,7 @@ const headerLinks: HeaderLinks[] = [
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -97,6 +102,7 @@ const headerLinks: HeaderLinks[] = [
 
 .social-links {
     display: flex;
+    flex-shrink: 0;
     gap: 0.5rem;
 }
 
@@ -121,5 +127,36 @@ const headerLinks: HeaderLinks[] = [
 .linkedin-icon {
     mask: url('/linkedin.svg') center / contain no-repeat;
     -webkit-mask: url('/linkedin.svg') center / contain no-repeat;
+}
+
+@media (max-width: 760px) {
+    .nav-list {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .header-links {
+        gap: 0.75rem 1rem;
+    }
+
+    .header-link {
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header-links {
+        gap: 0.5rem 0.75rem;
+    }
+
+    .header-link {
+        font-size: 0.9rem;
+    }
 }
 </style>
