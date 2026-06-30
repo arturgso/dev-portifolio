@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 interface HeaderLinks {
     title: string;
     route: string;
@@ -8,25 +7,25 @@ interface HeaderLinks {
 const headerLinks: HeaderLinks[] = [
     {
         title: "home",
-        route: "#home"
+        route: "#home",
     },
     {
         title: "sobre mim",
-        route: "#sobre"
+        route: "#sobre",
     },
     {
         title: "stack",
-        route: "#stack"
+        route: "#stack",
     },
-{
+    {
         title: "projetos",
-        route: "#projetos"
+        route: "#projetos",
     },
     {
         title: "contato",
-        route: "#contato"
+        route: "#contato",
     },
-]
+];
 </script>
 
 <template>
@@ -34,18 +33,34 @@ const headerLinks: HeaderLinks[] = [
         <div class="nav-list">
             <ul class="header-links">
                 <li v-for="item in headerLinks" :key="item.title">
-                    <a class="header-link" :href="item.route">{{ item.title }}</a>
+                    <a class="header-link" :href="item.route">{{
+                        item.title
+                    }}</a>
                 </li>
             </ul>
             <ul class="social-links">
                 <li>
-                    <a href="https://codeberg.org/vexis" target="_blank" rel="noopener noreferrer">
-                    <span class="social-icon github-icon" aria-label="github"></span>
+                    <a
+                        href="https://github.com/arturgso"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span
+                            class="social-icon github-icon"
+                            aria-label="github"
+                        ></span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/arturgaollidev/" target="_blank" rel="noopener noreferrer">
-                    <span class="social-icon linkedin-icon" aria-label="linkedin"></span>
+                    <a
+                        href="https://www.linkedin.com/in/arturgaollidev/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span
+                            class="social-icon linkedin-icon"
+                            aria-label="linkedin"
+                        ></span>
                     </a>
                 </li>
             </ul>
@@ -54,13 +69,12 @@ const headerLinks: HeaderLinks[] = [
 </template>
 
 <style scoped>
-
 .nav-button {
     display: flex;
     padding: 0.5rem 0;
     flex-direction: row;
     justify-content: space-between;
-    color: #A7A7A7;
+    color: #a7a7a7;
 }
 
 .nav-list {
@@ -96,7 +110,7 @@ const headerLinks: HeaderLinks[] = [
 }
 
 .header-link:hover {
-    color: #22C55E;
+    color: #22c55e;
 }
 
 .social-links {
@@ -113,22 +127,24 @@ const headerLinks: HeaderLinks[] = [
     width: 40px;
     height: 40px;
     background-color: #a7a7a7;
-    transition: transform 150ms, background-color 150ms;
+    transition:
+        transform 150ms,
+        background-color 150ms;
 }
 
 .social-icon:hover {
-    background-color: #22C55E;
+    background-color: #22c55e;
     transform: scale(1.1);
 }
 
 .github-icon {
-    mask: url('/github.svg') center / contain no-repeat;
-    -webkit-mask: url('/github.svg') center / contain no-repeat;
+    mask: url("/github.svg") center / contain no-repeat;
+    -webkit-mask: url("/github.svg") center / contain no-repeat;
 }
 
 .linkedin-icon {
-    mask: url('/linkedin.svg') center / contain no-repeat;
-    -webkit-mask: url('/linkedin.svg') center / contain no-repeat;
+    mask: url("/linkedin.svg") center / contain no-repeat;
+    -webkit-mask: url("/linkedin.svg") center / contain no-repeat;
 }
 
 @media (max-width: 760px) {

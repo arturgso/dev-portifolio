@@ -20,7 +20,7 @@ const projects = [
         title: "polaris",
         description:
             "Plataforma para organização de listas de presentes e compras pessoais, facilitando o planejamento e o compartilhamento.",
-        link: "https://polaris-demo.sloty.app.br",
+        link: "https://polaris-demo-xi.vercel.app",
         image: "/projects/polaris.png",
     },
 
@@ -28,7 +28,7 @@ const projects = [
         title: "oriontask",
         description:
             "Aplicativo de gerenciamento de tarefas inspirado nos conceitos de dharma e karma para incentivar produtividade e consistência.",
-        link: "#",
+        link: "https://oriontask-demo.vercel.app",
         image: "/projects/oriontask.png",
     },
 

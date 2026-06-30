@@ -2,8 +2,18 @@
     <footer class="footer">
         <p>Desenvolvido por Artur</p>
         <div class="footer-links">
-            <a href="https://codeberg.org/vexis" target="_blank" rel="noopener noreferrer">Codeberg</a>
-            <a href="https://www.linkedin.com/in/arturgaollidev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a
+                href="https://codeberg.org/vexis"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Github</a
+            >
+            <a
+                href="https://www.linkedin.com/in/arturgaollidev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+            >
         </div>
     </footer>
 </template>
@@ -39,7 +49,7 @@
 }
 
 .footer a:hover {
-    color: #22C55E;
+    color: #22c55e;
 }
 
 @media (max-width: 640px) {
