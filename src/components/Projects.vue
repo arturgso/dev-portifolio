@@ -1,22 +1,43 @@
 <script setup lang="ts">
 const projects = [
     {
-        title: 'Dashboard Financeiro',
-        description: 'Interface para visualizar receitas, despesas e métricas de desempenho em tempo real.',
-        demoUrl: '#',
-        previewClass: 'preview-green',
+        title: "sloty",
+        description:
+            "Plataforma de agendamento online para empresas, com gestão de horários, serviços, profissionais e disponibilidade em tempo real.",
+        link: "https://sloty.app.br",
+        image: "/projects/sloty.png",
     },
+
     {
-        title: 'API de Tarefas',
-        description: 'Serviço REST para gerenciamento de tarefas com autenticação e filtros por status.',
-        demoUrl: '#',
-        previewClass: 'preview-blue',
+        title: "boutique dkids",
+        description:
+            "E-commerce de moda infantil desenvolvido para oferecer uma experiência de compra simples, rápida e responsiva.",
+        link: "https://boutiquedkids.com.br",
+        image: "/projects/dkids.png",
     },
+
     {
-        title: 'Landing Page SaaS',
-        description: 'Página responsiva para apresentação de produto, planos e captura de leads.',
-        demoUrl: '#',
-        previewClass: 'preview-purple',
+        title: "polaris",
+        description:
+            "Plataforma para organização de listas de presentes e compras pessoais, facilitando o planejamento e o compartilhamento.",
+        link: "https://polaris-demo.sloty.app.br",
+        image: "/projects/polaris.png",
+    },
+
+    {
+        title: "oriontask",
+        description:
+            "Aplicativo de gerenciamento de tarefas inspirado nos conceitos de dharma e karma para incentivar produtividade e consistência.",
+        link: "#",
+        image: "/projects/oriontask.png",
+    },
+
+    {
+        title: "hermes",
+        description:
+            "CLI que utiliza IA para gerar mensagens de commit padronizadas a partir das alterações do Git, simplificando o fluxo de desenvolvimento.",
+        link: "https://github.com/arturgso/hermes",
+        image: "/projects/hermes.png",
     },
 ];
 </script>
@@ -25,19 +46,35 @@ const projects = [
     <section class="projects" id="projetos">
         <div class="projects-heading">
             <h2>Projetos</h2>
-            <p>Alguns trabalhos e estudos que representam meu processo de desenvolvimento.</p>
+            <p>
+                Alguns trabalhos e estudos que representam meu processo de
+                desenvolvimento.
+            </p>
         </div>
 
         <div class="project-grid">
-            <article v-for="project in projects" :key="project.title" class="project-card">
+            <article
+                v-for="project in projects"
+                :key="project.title"
+                class="project-card"
+            >
                 <div>
-                    <div class="project-preview" :class="project.previewClass" aria-hidden="true"></div>
+                    <div
+                        class="project-preview"
+                        :style="{ backgroundImage: `url(${project.image})` }"
+                        aria-hidden="true"
+                    ></div>
                     <h3>{{ project.title }}</h3>
                     <p>{{ project.description }}</p>
                 </div>
 
-                <a :href="project.demoUrl" class="demo-button" target="_blank" rel="noopener noreferrer">
-                    Ver demo
+                <a
+                    :href="project.link"
+                    class="demo-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Acessar
                 </a>
             </article>
         </div>
@@ -88,20 +125,28 @@ const projects = [
     border: 1px solid #2f2f2f;
     border-radius: 0.5rem;
     background: #1f1f1f;
-    transition: border-color 150ms, transform 150ms, background 150ms;
+    transition:
+        border-color 150ms,
+        transform 150ms,
+        background 150ms;
+}
+
+.project-card h3 {
+    text-transform: capitalize;
 }
 
 .project-preview {
     width: 100%;
+    background-size: cover;
     aspect-ratio: 16 / 9;
     margin-bottom: 1.25rem;
     border: 1px solid #2f2f2f;
     border-radius: 0.35rem;
-    background: #22C55E;
+    /*background: #22c55e;*/
 }
 
 .preview-green {
-    background: linear-gradient(135deg, #052e16, #22C55E);
+    background: linear-gradient(135deg, #052e16, #22c55e);
 }
 
 .preview-blue {
@@ -113,7 +158,7 @@ const projects = [
 }
 
 .project-card:hover {
-    border-color: #22C55E;
+    border-color: #22c55e;
     background: #222222;
     transform: translateY(-4px);
 }
@@ -138,17 +183,20 @@ const projects = [
     align-items: center;
     justify-content: center;
     padding: 0.75rem 1rem;
-    border: 1px solid #22C55E;
+    border: 1px solid #22c55e;
     border-radius: 0.35rem;
-    color: #22C55E;
+    color: #22c55e;
     font-size: 0.95rem;
     font-weight: 800;
     text-decoration: none;
-    transition: background-color 150ms, color 150ms, transform 150ms;
+    transition:
+        background-color 150ms,
+        color 150ms,
+        transform 150ms;
 }
 
 .demo-button:hover {
-    background-color: #22C55E;
+    background-color: #22c55e;
     color: #0f0f0f;
     transform: scale(1.03);
 }
