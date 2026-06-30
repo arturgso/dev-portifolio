@@ -8,8 +8,9 @@
             </p>
         </div>
 
-        <p class="phone">Telefone: <a href="tel:+5500000000000">+55 (00) 00000-0000</a></p>
+        <p class="phone">Telefone: <a href="tel:+5511921805274">+55 (11) 92180-5274</a></p>
 
+        <!--
         <form class="contact-form" action="mailto:artur@example.com" method="post" enctype="text/plain">
             <label>
                 Nome
@@ -28,6 +29,7 @@
 
             <button class="contact-button" type="submit">Enviar mensagem</button>
         </form>
+        -->
     </section>
 </template>
 

@@ -3,7 +3,7 @@
         <p>Desenvolvido por Artur</p>
         <div class="footer-links">
             <a
-                href="https://codeberg.org/vexis"
+                href="https://github.com/arturgso"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Github</a
