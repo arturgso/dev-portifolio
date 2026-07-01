@@ -1,55 +1,55 @@
 <script setup lang="ts">
-const projects = [
+import { computed } from 'vue';
+import { t } from '../i18n';
+
+type ProjectKey = 'sloty' | 'dkids' | 'polaris' | 'oriontask' | 'hermes';
+
+const projectsBase: Array<{ key: ProjectKey; link: string; image: string }> = [
     {
-        title: "sloty",
-        description:
-            "Plataforma de agendamento online para empresas, com gestão de horários, serviços, profissionais e disponibilidade em tempo real.",
+        key: 'sloty',
         link: "https://sloty.app.br",
         image: "/projects/sloty.png",
     },
 
     {
-        title: "boutique dkids",
-        description:
-            "E-commerce de moda infantil desenvolvido para oferecer uma experiência de compra simples, rápida e responsiva.",
+        key: 'dkids',
         link: "https://boutiquedkids.com.br",
         image: "/projects/dkids.png",
     },
 
     {
-        title: "polaris",
-        description:
-            "Plataforma para organização de listas de presentes e compras pessoais, facilitando o planejamento e o compartilhamento.",
+        key: 'polaris',
         link: "https://polaris-demo-xi.vercel.app",
         image: "/projects/polaris.png",
     },
 
     {
-        title: "oriontask",
-        description:
-            "Aplicativo de gerenciamento de tarefas inspirado nos conceitos de dharma e karma para incentivar produtividade e consistência.",
+        key: 'oriontask',
         link: "https://oriontask-demo.vercel.app",
         image: "/projects/oriontask.png",
     },
 
     {
-        title: "hermes",
-        description:
-            "CLI que utiliza IA para gerar mensagens de commit padronizadas a partir das alterações do Git, simplificando o fluxo de desenvolvimento.",
+        key: 'hermes',
         link: "https://github.com/arturgso/hermes",
         image: "/projects/hermes.png",
     },
 ];
+
+const projects = computed(() =>
+    projectsBase.map((project) => ({
+        ...project,
+        title: t(`projects.items.${project.key}.title`),
+        description: t(`projects.items.${project.key}.description`),
+    })),
+);
 </script>
 
 <template>
     <section class="projects" id="projetos">
         <div class="projects-heading">
-            <h2>Projetos</h2>
-            <p>
-                Alguns trabalhos e estudos que representam meu processo de
-                desenvolvimento.
-            </p>
+            <h2>{{ t('projects.title') }}</h2>
+            <p>{{ t('projects.subtitle') }}</p>
         </div>
 
         <div class="project-grid">
@@ -74,7 +74,7 @@ const projects = [
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Acessar
+                    {{ t('projects.access') }}
                 </a>
             </article>
         </div>

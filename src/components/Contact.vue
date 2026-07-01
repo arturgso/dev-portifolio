@@ -1,14 +1,20 @@
+<script setup lang="ts">
+import { t } from '../i18n';
+</script>
+
 <template>
     <section class="contact" id="contato">
         <div class="contact-heading">
-            <h2>Contato</h2>
+            <h2>{{ t('contact.title') }}</h2>
             <p>
-                Tem uma ideia, projeto ou oportunidade? Fique à vontade para entrar
-                em contato.
+                {{ t('contact.subtitle') }}
             </p>
         </div>
 
-        <p class="phone">Telefone: <a href="tel:+5511921805274">+55 (11) 92180-5274</a></p>
+        <p class="phone">
+            {{ t('contact.phone') }}:
+            <a href="tel:+5511921805274">+55 (11) 92180-5274</a>
+        </p>
 
         <!--
         <form class="contact-form" action="mailto:artur@example.com" method="post" enctype="text/plain">

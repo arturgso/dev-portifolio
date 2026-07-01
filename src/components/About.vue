@@ -1,18 +1,16 @@
+<script setup lang="ts">
+import { t } from '../i18n';
+</script>
+
 <template>
     <section class="about" id="sobre">
         <div class="section-heading">
-            <h2>Sobre mim</h2>
+            <h2>{{ t('about.title') }}</h2>
         </div>
 
         <div class="about-content">
             <p>
-                Olá! Sou Artur, desenvolvedor Fullstack com forte atuação em backend
-                utilizando Java e Spring Boot. Trabalho com APIs, microsserviços,
-                bancos de dados, mensageria e infraestrutura Linux, além de
-                desenvolver interfaces com React e Vue. Sou entusiasta de tecnologia,
-                software open-source e arquitetura de sistemas, e estou sempre em
-                busca de criar soluções que sejam simples, eficientes e fáceis de
-                manter.
+                {{ t('about.text') }}
             </p>
         </div>
     </section>

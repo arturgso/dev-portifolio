@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { t } from '../i18n';
+
 const technologies = [
     { name: 'JavaScript', icon: '/javascript.svg' },
     { name: 'TypeScript', icon: '/typescript.svg' },
@@ -22,8 +24,8 @@ const technologies = [
 <template>
     <section class="tech-stack" id="stack">
         <div class="stack-heading">
-            <h2>Minhas Stacks</h2>
-            <p>Tecnologias e frameworks que venho usando recentemente</p>
+            <h2>{{ t('stack.title') }}</h2>
+            <p>{{ t('stack.subtitle') }}</p>
         </div>
 
         <ul class="tech-list">

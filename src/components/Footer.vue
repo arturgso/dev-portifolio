@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import { t } from '../i18n';
+</script>
+
 <template>
     <footer class="footer">
-        <p>Desenvolvido por Artur</p>
+        <p>{{ t('footer.developedBy') }}</p>
         <div class="footer-links">
             <a
                 href="https://github.com/arturgso"

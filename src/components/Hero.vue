@@ -1,13 +1,14 @@
 <script setup lang="ts">
+import { t } from '../i18n';
 </script>
 
 <template>
     <section class="hero-container" id="home">
         <h1 class="message">
-            Olá 👋,<br />
-            Meu nome é<br />
-            <span>Artur</span><br />
-            Eu faço sites para web
+            {{ t('hero.hello') }}<br />
+            {{ t('hero.intro') }}<br />
+            <span>{{ t('hero.name') }}</span><br />
+            {{ t('hero.tagline') }}
         </h1>
         <div class="dev-pic"></div>
     </section>
